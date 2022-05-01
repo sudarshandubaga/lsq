@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return '<center>
+        <h1>Comming Soon...</h1>
+        <p>We\'re online very soon.</p>
+    </center>';
+});
+
+Route::get('/test', function () {
     return view('welcome');
 });

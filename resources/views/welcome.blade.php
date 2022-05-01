@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="{{ url('images/logo.png') }}" alt="">
@@ -243,7 +243,7 @@
     <!-- Product Overview End -->
 
     <!-- Product Details Start -->
-    <section class="bg-white">
+    <section class="bg-white product-details">
         <div class="row g-0">
             <div class="col-lg-6 text-center">
                 <div class="p-5">
@@ -324,7 +324,7 @@
     <!-- Product Ingredients End -->
 
     <!-- Product Details Start -->
-    <section class="bg-white">
+    <section class="bg-white product-details">
         <div class="row g-0">
             <div class="col-lg-6 text-center">
                 <div class="p-5">
@@ -403,6 +403,251 @@
         </div>
     </section>
     <!-- Product Ingredients End -->
+
+    <section class="py-5 bg-white">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-center section-heading mb-5">
+                        <h4>What our customers says</h4>
+                        <h3>Client's Testimonials</h3>
+                    </div>
+                    <div class="testimonial-box">
+                        <div id="testimonialSlider" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <img src="{{ url('images/user.jpg') }}" class="rounded-circle" alt="">
+                                        </div>
+                                        <div>
+                                            <blockquote>
+                                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has 
+                                                roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                                                years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+                                                College in Virginia, looked up one of the more obscure Latin words, 
+                                                consectetur, from a Lorem Ipsum passage, and going through the cites of 
+                                                the word in classical literature, discovered the undoubtable source.
+                                            </blockquote>
+                                            <div>
+                                                <strong>
+                                                - Robin Donald
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <img src="{{ url('images/user.jpg') }}" class="rounded-circle" alt="">
+                                        </div>
+                                        <div>
+                                            <blockquote>
+                                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has 
+                                                roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                                                years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+                                                College in Virginia, looked up one of the more obscure Latin words, 
+                                                consectetur, from a Lorem Ipsum passage, and going through the cites of 
+                                                the word in classical literature, discovered the undoubtable source.
+                                            </blockquote>
+                                            <div>
+                                                <strong>
+                                                - Robin Donald
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <img src="{{ url('images/user.jpg') }}" class="rounded-circle" alt="">
+                                        </div>
+                                        <div>
+                                            <blockquote>
+                                                Contrary to popular belief, Lorem Ipsum is not simply random text. It has 
+                                                roots in a piece of classical Latin literature from 45 BC, making it over 2000
+                                                years old. Richard McClintock, a Latin professor at Hampden-Sydney 
+                                                College in Virginia, looked up one of the more obscure Latin words, 
+                                                consectetur, from a Lorem Ipsum passage, and going through the cites of 
+                                                the word in classical literature, discovered the undoubtable source.
+                                            </blockquote>
+                                            <div>
+                                                <strong>
+                                                - Robin Donald
+                                                </strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialSlider" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#testimonialSlider" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center section-heading mb-5">
+                        <h4>What is in your mind?</h4>
+                        <h3>Frequently Asked Questions</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        @for($i = 1; $i <= 6; $i++)
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button{{ $i === 1 ? ' show' : '' }}" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-{{ $i }}" aria-expanded="false" aria-controls="flush-collapseOne-{{ $i }}">
+                                    The standard Lorem Ipsum passage, used since the 1500s
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne-{{ $i }}" class="accordion-collapse collapse{{ $i === 1 ? ' show' : '' }}" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+industry's standard dummy text ever since the 1500s,</div>
+                            </div>
+                        </div>
+                        @endfor
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="py-5">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="mb-3">
+                            <img src="{{ url('images/logo.png') }}" alt="">
+                        </div>
+                        <p class="text-justify">
+                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
+                        </p>
+                        <div class="social-links">
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <h3 class="my-3">Quick Links</h3>
+
+                        <ul class="m-0 p-0">
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    FAQ
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Testimonials
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Features
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <h3 class="my-3">Important Links</h3>
+
+                        <ul class="m-0 p-0">
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Terms
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Privacy Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Certificates
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Terms of Use
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Guideline
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                    Support
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="py-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        &copy; Copyright {{ date('Y') }}. All rights reserved.
+                    </div>
+                    <div class="col-lg-6 text-end">
+                        Designed &amp; Developed By: <a href="https://rudrakshatech.com" target="_blank" rel="dofollow">Rudraksha Tech</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
     <script src="{{ url('js/app.js') }}"></script>

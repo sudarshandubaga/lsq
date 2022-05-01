@@ -2,18 +2,6 @@ require('./bootstrap');
 require('lightslider');
 
 jQuery(function ($) {
-    $(window).on('scroll load', function () {
-        var scroll = $(window).scrollTop();
-
-        //>=, not <=
-        if (scroll >= 100) {
-            //clearHeader, not clearheader - caps H
-            $(".navbar-light").addClass("bg-primary");
-        }
-        else {
-            $(".navbar-light").removeClass("bg-primary");
-        }
-    });
 
 
     $('.product-slider').lightSlider({
