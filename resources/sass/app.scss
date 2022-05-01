@@ -30,10 +30,16 @@ b {
 .text-primary {
     color: $primary-color !important;
 }
-
+#bannerSlider {
+    .carousel-control-next, 
+    .carousel-control-prev {
+        z-index: 9999;
+    }
+}
 .banner-slide {
     height: 100vh;
     background-color: $primary-color;
+
 }
 .navbar-nav {
     .nav-item {
